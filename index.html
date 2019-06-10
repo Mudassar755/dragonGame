@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        #appContainer {
+
+
+            width: 70vw;
+            height: 90vh;
+            margin: auto;
+            background-image: url('back.jpg');
+
+        }
+
+        #start-btn img {
+            width: 100%;
+
+        }
+
+
+        .coin {
+            position: absolute;
+            width: 50px;
+            border:1px solid red;
+        }
+
+        #start-btn:hover {
+            opacity: 0.7;
+        }
+
+        #start-btn {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            left: calc(50% - 100px);
+            top: 50%;
+            cursor: pointer;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        #gameHero {
+            width: 165px;
+            position: absolute;
+            top: 145px;
+            left: 20%;
+            border:1px solid blue;
+        }
+
+        #scoreBox {
+            position: absolute;
+            top: 7%;
+            left: 19%;
+            font-size: 2em;
+        }
+    </style>
+
+    <script src="data.js"></script>
+    <script>
+
+
+        window.onload = function () {
+
+            game.init();
+
+        }
+
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="appContainer">
+
+        <section id="splashScreen">
+
+            <div id="start-btn">
+                <img id="gameStarter" src="start-button.png" />
+            </div>
+
+        </section>
+
+        <section id="gameScreen" class="hide">
+
+
+            <img id="gameHero" src="dragon.png" />
+
+
+            <div id="scoreBox">
+               <h2>SCORE </h2> <span id="scoreItem">0</span>
+            </div>
+
+
+        </section>
+
+        <section id="gameOver" class="hide">
+
+            <h1>This is game over screen</h1>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
